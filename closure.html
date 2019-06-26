@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="www.w3.org/1999/xhtml">
+	<script>
+		function rectangle(){
+			var length,breadth;
+			function create(l,b){
+				length=l;
+				breadth=b;
+			}
+			function getArea(){
+				return (length * breadth);
+			}
+			function perimeter(){
+				return (2 *(length+breadth));
+			}
+			var publicAPI={
+				create:create,
+				getArea : getArea,
+				perimeter: perimeter
+			};
+			return publicAPI;
+		}
+		var myRectangle=rectangle();
+		myRectangle.create(10,20);
+		document.write("Area:&nbsp;"+myRectangle.getArea());
+		document.write("<br>Perimeter:&nbsp;"+myRectangle.perimeter());
+	</script>
+</html>
